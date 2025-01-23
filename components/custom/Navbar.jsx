@@ -8,11 +8,11 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import {
+  getKindeServerSession,
   RegisterLink,
   LoginLink,
   LogoutLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();

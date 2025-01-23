@@ -1,16 +1,17 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 const ClientBtn = ({ label, id }) => {
   return (
     <>
-      <button
+      <Link
+        href={`/${id}`}
         type="button"
-        onClick={() => console.log("Object id: ", id)}
         className="px-4 py-2 text-base bg-[rgba(0,0,0,0.3)] rounded-lg"
       >
         {label}
-      </button>
+      </Link>
     </>
   );
 };
