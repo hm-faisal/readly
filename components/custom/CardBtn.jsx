@@ -2,11 +2,11 @@
 import Link from "next/link";
 import React from "react";
 
-const ClientBtn = ({ label, id }) => {
+const ClientBtn = ({ label, href }) => {
   return (
     <>
       <Link
-        href={`/${id}`}
+        href={href}
         type="button"
         className="px-4 py-2 text-base bg-[rgba(0,0,0,0.3)] rounded-lg"
       >

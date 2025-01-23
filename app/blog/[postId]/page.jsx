@@ -8,7 +8,7 @@ const Page = async ({ params }) => {
 
   const { isAuthenticated } = getKindeServerSession();
   if (!(await isAuthenticated())) {
-    redirect(`/api/auth/login?post_login_redirect_url=/${postId}`);
+    redirect(`/api/auth/login?post_login_redirect_url=/blog/${postId}`);
   }
 
   // Fetch data on the server
@@ -17,8 +17,8 @@ const Page = async ({ params }) => {
   );
   const post = await res.json();
   return (
-    <div className="flex justify-center items-center flex-col gap-4 container mx-auto">
-      <h1 className="text-5xl font-bold">{post.title}</h1>
+    <div className="flex justify-center items-center flex-col gap-4 container mx-auto text-center">
+      <h1 className="text-xl md:text-5xl font-bold">{post.title}</h1>
       <p>{post.body}</p>
     </div>
   );
