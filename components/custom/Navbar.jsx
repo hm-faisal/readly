@@ -19,7 +19,7 @@ const Navbar = async () => {
   const user = await getUser();
 
   return (
-    <nav className="flex justify-between items-center px-12 bg-[rgba(0,0,0,0.7)]">
+    <nav className="flex justify-between items-center px-12 py-2 bg-[rgba(0,0,0,0.3)] sticky top-0">
       <div className="">
         <Image
           src="/logo.webp"
